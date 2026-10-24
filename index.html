@@ -157,10 +157,8 @@
                     <!-- Фото або стильна інтерактивна картка -->
                     <div class="lg:col-span-5 flex justify-center">
                         <div class="relative w-full max-w-md">
-                            <!-- Декоративний фон -->
-                            
-                            
                             <div class="relative rounded-3xl overflow-hidden">
+                                
                                 <img src="img/Photo 1.png" 
                                      alt="Олександр Бережний - медичний психолог" 
                                      class="w-full h-[400px] sm:h-[480px] object-cover"
@@ -381,7 +379,7 @@
                 <div class="space-y-4 max-w-4xl mx-auto">
                     
                     <!-- Плашка 1 -->
-                    <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <a href="#diploma-modal" onclick="openModal('diploma-modal'); return false;" aria-haspopup="dialog" class="block bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-brand-300 hover:shadow-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600">
                         <div class="flex items-start space-x-4">
                             <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 mt-1">
                                 <i class="fa-solid fa-graduation-cap"></i>
@@ -392,7 +390,7 @@
                             </div>
                         </div>
                         <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-calm-700 self-start md:self-center">2008–2014 роки</span>
-                    </div>
+                    </a>
 
                     <!-- Плашка 2 -->
                     <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -679,7 +677,7 @@
                     </a>
 
                     <!-- Телефон -->
-                    <a href="tel:+380" class="flex flex-col items-center justify-center p-6 rounded-2xl bg-brand-50 border border-brand-200 hover:bg-brand-100 text-brand-800 font-semibold transition group shadow-sm">
+                    <a href="tel:+380980742491" class="flex flex-col items-center justify-center p-6 rounded-2xl bg-brand-50 border border-brand-200 hover:bg-brand-100 text-brand-800 font-semibold transition group shadow-sm">
                         <i class="fa-solid fa-phone text-3xl mb-3 text-brand-600 group-hover:scale-110 transition-transform"></i>
                         <span class="text-lg">Телефон</span>
                         <span class="text-xs font-normal text-brand-700 mt-1">Зателефонувати</span>
@@ -763,6 +761,24 @@
 
     <!-- МОДАЛЬНІ ВІКНА ДЛЯ ЮРИДИЧНОЇ ІНФОРМАЦІЇ -->
     
+    <!-- Модалка: Диплом -->
+    <div id="diploma-modal" role="dialog" aria-modal="true" aria-labelledby="diploma-modal-title" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+            <div class="p-5 sm:p-6 border-b border-slate-200 flex justify-between items-center shrink-0">
+                <h3 id="diploma-modal-title" class="text-xl font-bold text-calm-900">Диплом про вищу медичну освіту</h3>
+                <button type="button" onclick="closeModal('diploma-modal')" aria-label="Закрити" class="text-slate-400 hover:text-calm-900 text-2xl font-bold">&times;</button>
+            </div>
+            <div class="p-4 sm:p-6 overflow-y-auto flex justify-center">
+                <img src="img/diploma.jpg" alt="Фото диплома про вищу медичну освіту" class="max-h-[70vh] w-full object-contain" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden')">
+                <div class="hidden flex min-h-64 w-full flex-col items-center justify-center gap-3 rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 p-6 text-center text-calm-700">
+                    <i class="fa-regular fa-image text-4xl text-slate-400" aria-hidden="true"></i>
+                    <p class="font-semibold">Додайте фото диплома</p>
+                    <p class="text-sm">Збережіть зображення у папці <code>img</code> під назвою <code>diploma.jpg</code>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Модалка: Оферта -->
     <div id="oferta-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl">
